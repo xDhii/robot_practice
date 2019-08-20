@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1 (Python 3.7.4 on win32)" generated="20190820 11:26:39.801" rpa="false">
+<robot generator="Robot 3.1.1 (Python 3.7.4 on win32)" generated="20190820 14:52:55.517" rpa="false">
 <suite id="s1" name="TestSite" source="\\corp.sovos.local\sovos\SPO\Users\Adriano Valumin\Cursos\Robot\test3\tests\TestSite.robot">
 <test id="s1-t1" name="Criar uma nova company">
 <kw name="Abrir navegador" library="Resource" type="setup">
@@ -9,33 +9,33 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20190820 11:26:40.102" level="INFO">Opening browser 'chrome' to base url 'http://qavat2.sovos.com/'.</msg>
-<status status="PASS" starttime="20190820 11:26:40.102" endtime="20190820 11:26:53.049"></status>
+<msg timestamp="20190820 14:52:55.782" level="INFO">Opening browser 'chrome' to base url 'http://qavat2.sovos.com/'.</msg>
+<status status="PASS" starttime="20190820 14:52:55.782" endtime="20190820 14:53:02.661"></status>
 </kw>
-<status status="PASS" starttime="20190820 11:26:40.101" endtime="20190820 11:26:53.049"></status>
+<status status="PASS" starttime="20190820 14:52:55.781" endtime="20190820 14:53:02.661"></status>
 </kw>
 <kw name="Fazer login com o email &quot;${emailadmin}&quot; e senha &quot;${senhaadmin}!&quot;no portal" library="Resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that current page title equals ``title``.</doc>
 <arguments>
-<arg>Login</arg>
+<arg>${logintitle}</arg>
 </arguments>
-<msg timestamp="20190820 11:26:53.054" level="INFO">Page title is 'Login'.</msg>
-<status status="PASS" starttime="20190820 11:26:53.050" endtime="20190820 11:26:53.054"></status>
+<msg timestamp="20190820 14:53:02.668" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20190820 14:53:02.662" endtime="20190820 14:53:02.668"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//*[@id="Email"]</arg>
 </arguments>
-<status status="PASS" starttime="20190820 11:26:53.054" endtime="20190820 11:26:53.088"></status>
+<status status="PASS" starttime="20190820 14:53:02.668" endtime="20190820 14:53:02.695"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//*[@id="Password"]</arg>
 </arguments>
-<status status="PASS" starttime="20190820 11:26:53.088" endtime="20190820 11:26:53.111"></status>
+<status status="PASS" starttime="20190820 14:53:02.695" endtime="20190820 14:53:02.718"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -43,8 +43,8 @@
 <arg>name=Email</arg>
 <arg>${emailadmin}</arg>
 </arguments>
-<msg timestamp="20190820 11:26:53.111" level="INFO">Typing text 'adriano@test' into text field 'name=Email'.</msg>
-<status status="PASS" starttime="20190820 11:26:53.111" endtime="20190820 11:26:53.207"></status>
+<msg timestamp="20190820 14:53:02.719" level="INFO">Typing text 'adriano@test' into text field 'name=Email'.</msg>
+<status status="PASS" starttime="20190820 14:53:02.719" endtime="20190820 14:53:02.796"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -52,25 +52,25 @@
 <arg>name=Password</arg>
 <arg>${senhaadmin}</arg>
 </arguments>
-<msg timestamp="20190820 11:26:53.207" level="INFO">Typing text 'Sovos123!' into text field 'name=Password'.</msg>
-<status status="PASS" starttime="20190820 11:26:53.207" endtime="20190820 11:26:53.314"></status>
+<msg timestamp="20190820 14:53:02.797" level="INFO">Typing text 'Sovos123!' into text field 'name=Password'.</msg>
+<status status="PASS" starttime="20190820 14:53:02.796" endtime="20190820 14:53:02.873"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=/html/body/div[2]/div/div/div/div[2]/form/div[4]/div/button</arg>
 </arguments>
-<msg timestamp="20190820 11:26:53.315" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/div/div[2]/form/div[4]/div/button'.</msg>
-<status status="PASS" starttime="20190820 11:26:53.314" endtime="20190820 11:27:00.532"></status>
+<msg timestamp="20190820 14:53:02.874" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/div/div[2]/form/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20190820 14:53:02.874" endtime="20190820 14:53:12.637"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//*[@id="root-navigation-container"]</arg>
 </arguments>
-<status status="PASS" starttime="20190820 11:27:00.532" endtime="20190820 11:27:00.555"></status>
+<status status="PASS" starttime="20190820 14:53:12.637" endtime="20190820 14:53:12.672"></status>
 </kw>
-<status status="PASS" starttime="20190820 11:26:53.049" endtime="20190820 11:27:00.555"></status>
+<status status="PASS" starttime="20190820 14:53:02.662" endtime="20190820 14:53:12.672"></status>
 </kw>
 <kw name="Navegar até a tela de companies" library="Resource">
 <kw name="Go To" library="SeleniumLibrary">
@@ -78,86 +78,191 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20190820 11:27:00.556" level="INFO">Opening url 'http://qavat2.sovos.com/'</msg>
-<status status="PASS" starttime="20190820 11:27:00.556" endtime="20190820 11:27:02.187"></status>
+<msg timestamp="20190820 14:53:12.673" level="INFO">Opening url 'http://qavat2.sovos.com/'</msg>
+<status status="PASS" starttime="20190820 14:53:12.672" endtime="20190820 14:53:14.172"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that current page title equals ``title``.</doc>
 <arguments>
-<arg>Home</arg>
+<arg>${hometitle}</arg>
 </arguments>
-<msg timestamp="20190820 11:27:02.191" level="INFO">Page title is 'Home'.</msg>
-<status status="PASS" starttime="20190820 11:27:02.188" endtime="20190820 11:27:02.191"></status>
+<msg timestamp="20190820 14:53:14.177" level="INFO">Page title is 'Home'.</msg>
+<status status="PASS" starttime="20190820 14:53:14.172" endtime="20190820 14:53:14.177"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//*[@id="admin-btn"]</arg>
 </arguments>
-<status status="PASS" starttime="20190820 11:27:02.191" endtime="20190820 11:27:02.221"></status>
+<status status="PASS" starttime="20190820 14:53:14.177" endtime="20190820 14:53:14.209"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=//*[@id="EU Tax Reporting"]</arg>
 </arguments>
-<msg timestamp="20190820 11:27:02.221" level="INFO">Clicking element 'xpath=//*[@id="EU Tax Reporting"]'.</msg>
-<status status="PASS" starttime="20190820 11:27:02.221" endtime="20190820 11:27:09.605"></status>
+<msg timestamp="20190820 14:53:14.209" level="INFO">Clicking element 'xpath=//*[@id="EU Tax Reporting"]'.</msg>
+<status status="PASS" starttime="20190820 14:53:14.209" endtime="20190820 14:53:27.114"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//*[@id="Tools and Reports"]</arg>
 </arguments>
-<status status="PASS" starttime="20190820 11:27:09.605" endtime="20190820 11:27:09.630"></status>
+<status status="PASS" starttime="20190820 14:53:27.114" endtime="20190820 14:53:27.140"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=//*[@id="Settings"]</arg>
 </arguments>
-<msg timestamp="20190820 11:27:09.631" level="INFO">Clicking element 'xpath=//*[@id="Settings"]'.</msg>
-<status status="PASS" starttime="20190820 11:27:09.630" endtime="20190820 11:27:09.691"></status>
+<msg timestamp="20190820 14:53:27.141" level="INFO">Clicking element 'xpath=//*[@id="Settings"]'.</msg>
+<status status="PASS" starttime="20190820 14:53:27.141" endtime="20190820 14:53:27.210"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=//*[@id="Companies"]</arg>
 </arguments>
-<msg timestamp="20190820 11:27:09.691" level="INFO">Clicking element 'xpath=//*[@id="Companies"]'.</msg>
-<status status="PASS" starttime="20190820 11:27:09.691" endtime="20190820 11:27:11.067"></status>
+<msg timestamp="20190820 14:53:27.210" level="INFO">Clicking element 'xpath=//*[@id="Companies"]'.</msg>
+<status status="PASS" starttime="20190820 14:53:27.210" endtime="20190820 14:53:28.212"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@id="content"]//*[contains(text(),"Create Company")]</arg>
+<arg>xpath=//*[@id="content"]//*[@class="btn btn-primary btn-create"]</arg>
 </arguments>
-<status status="PASS" starttime="20190820 11:27:11.067" endtime="20190820 11:27:11.090"></status>
+<status status="PASS" starttime="20190820 14:53:28.212" endtime="20190820 14:53:28.235"></status>
 </kw>
-<status status="PASS" starttime="20190820 11:27:00.555" endtime="20190820 11:27:11.090"></status>
+<status status="PASS" starttime="20190820 14:53:12.672" endtime="20190820 14:53:28.235"></status>
+</kw>
+<kw name="Uma vez na tela de companies, criar uma company" library="Resource">
+<kw name="Generate Banana String" library="Resource">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${token_locator1}</var>
+</assign>
+<msg timestamp="20190820 14:53:28.237" level="INFO">${token_locator1} = 55027515</msg>
+<status status="PASS" starttime="20190820 14:53:28.236" endtime="20190820 14:53:28.237"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>2</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${token_locator2}</var>
+</assign>
+<msg timestamp="20190820 14:53:28.237" level="INFO">${token_locator2} = 36</msg>
+<status status="PASS" starttime="20190820 14:53:28.237" endtime="20190820 14:53:28.237"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${TOKEN1}</arg>
+<arg>${token_locator1}</arg>
+</arguments>
+<msg timestamp="20190820 14:53:28.238" level="INFO">${TOKEN1} = 55027515</msg>
+<status status="PASS" starttime="20190820 14:53:28.237" endtime="20190820 14:53:28.238"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${TOKEN2}</arg>
+<arg>${token_locator2}</arg>
+</arguments>
+<msg timestamp="20190820 14:53:28.240" level="INFO">${TOKEN2} = 36</msg>
+<status status="PASS" starttime="20190820 14:53:28.238" endtime="20190820 14:53:28.240"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOKEN1}</arg>
+</arguments>
+<status status="PASS" starttime="20190820 14:53:28.240" endtime="20190820 14:53:28.241"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOKEN2}</arg>
+</arguments>
+<status status="PASS" starttime="20190820 14:53:28.241" endtime="20190820 14:53:28.241"></status>
+</kw>
+<status status="PASS" starttime="20190820 14:53:28.236" endtime="20190820 14:53:28.241"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]//*[@class="btn btn-primary btn-create"]</arg>
+</arguments>
+<msg timestamp="20190820 14:53:28.242" level="INFO">Clicking element 'xpath=//*[@id="content"]//*[@class="btn btn-primary btn-create"]'.</msg>
+<status status="PASS" starttime="20190820 14:53:28.241" endtime="20190820 14:53:28.994"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="LegalName"]</arg>
+<arg>${TOKEN1}</arg>
+</arguments>
+<msg timestamp="20190820 14:53:28.995" level="INFO">Typing text '55027515' into text field 'xpath=//*[@id="LegalName"]'.</msg>
+<status status="PASS" starttime="20190820 14:53:28.994" endtime="20190820 14:53:29.062"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="AbbreviatedName"]</arg>
+<arg>${TOKEN2}</arg>
+</arguments>
+<msg timestamp="20190820 14:53:29.062" level="INFO">Typing text '36' into text field 'xpath=//*[@id="AbbreviatedName"]'.</msg>
+<status status="PASS" starttime="20190820 14:53:29.062" endtime="20190820 14:53:29.119"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/app/main/view-rules/div[2]/div/div/div[3]/div/button</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190820 14:53:34.618" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190820 14:53:34.303" endtime="20190820 14:53:34.619"></status>
+</kw>
+<msg timestamp="20190820 14:53:34.620" level="FAIL">Element 'xpath=//*[@id="content"]/app/main/view-rules/div[2]/div/div/div[3]/div/button' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20190820 14:53:29.120" endtime="20190820 14:53:34.620"></status>
+</kw>
+<status status="FAIL" starttime="20190820 14:53:28.236" endtime="20190820 14:53:34.620"></status>
 </kw>
 <kw name="Fechar navegador" library="Resource" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20190820 11:27:11.090" endtime="20190820 11:27:13.303"></status>
+<status status="PASS" starttime="20190820 14:53:34.621" endtime="20190820 14:53:36.790"></status>
 </kw>
-<status status="PASS" starttime="20190820 11:27:11.090" endtime="20190820 11:27:13.303"></status>
+<status status="PASS" starttime="20190820 14:53:34.621" endtime="20190820 14:53:36.790"></status>
 </kw>
-<status status="PASS" starttime="20190820 11:26:40.101" endtime="20190820 11:27:13.303" critical="yes"></status>
+<status status="FAIL" starttime="20190820 14:52:55.781" endtime="20190820 14:53:36.790" critical="yes">Element 'xpath=//*[@id="content"]/app/main/view-rules/div[2]/div/div/div[3]/div/button' not visible after 5 seconds.</status>
 </test>
-<status status="PASS" starttime="20190820 11:26:39.804" endtime="20190820 11:27:13.305"></status>
+<status status="FAIL" starttime="20190820 14:52:55.520" endtime="20190820 14:53:36.791"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="TestSite">TestSite</stat>
+<stat pass="0" fail="1" id="s1" name="TestSite">TestSite</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20190820 14:52:55.577" level="ERROR">Error in file '\\corp.sovos.local\sovos\SPO\Users\Adriano Valumin\Cursos\Robot\test3\resource\Variables.robot': Setting variable 'Get Company Locator' failed: Invalid variable name 'Get Company Locator'.</msg>
+<msg timestamp="20190820 14:52:55.578" level="ERROR">Error in file '\\corp.sovos.local\sovos\SPO\Users\Adriano Valumin\Cursos\Robot\test3\resource\Variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20190820 14:52:55.578" level="ERROR">Error in file '\\corp.sovos.local\sovos\SPO\Users\Adriano Valumin\Cursos\Robot\test3\resource\Variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20190820 14:52:55.578" level="ERROR">Error in file '\\corp.sovos.local\sovos\SPO\Users\Adriano Valumin\Cursos\Robot\test3\resource\Variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
 </errors>
 </robot>
