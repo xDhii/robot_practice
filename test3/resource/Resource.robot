@@ -39,28 +39,38 @@ Navegar até a tela de companies
 Uma vez na tela de companies, criar uma company
     Generate Company String
     Click Element                           xpath=//*[@id="content"]//*[@class="btn btn-primary btn-create"]
-    Input Text                              xpath=//*[@id="LegalName"]          ${TOKEN1}
-    Input Text                              xpath=//*[@id="AbbreviatedName"]    ${TOKEN2}
+    Input Text                              xpath=//*[@id="LegalName"]          ${companynamefull}
+    Input Text                              xpath=//*[@id="AbbreviatedName"]    ${companynameabr}
     Click Element                           xpath=//*[@id="content"]/div[3]/form/div[3]//*[@class="btn btn-primary"]
     Wait Until Element Is Visible           xpath=//*[@id="content"]/app/main/view-rules/div[2]/div/div/div[3]/div/button
 
 Encontrar e deletar a company criada
     Navegar até a tela de companies
-    Wait Until Element Is Visible           xpath=//*[@id="tblCompanies"]//*[@class="k-grid-content"]//*[@role="grid"]//*[@role="rowgroup"]//*[td="${TOKEN1}"]//*[@class='delete-cell']//*[@class='badge badge-important']//*[@class='icon-remove icon-white']
-    Click Element                           xpath=//*[@id="tblCompanies"]//*[@class="k-grid-content"]//*[@role="grid"]//*[@role="rowgroup"]//*[td="${TOKEN1}"]//*[@class='delete-cell']
+    Wait Until Element Is Visible           xpath=//*[@id="tblCompanies"]//*[@class="k-grid-content"]//*[@role="grid"]//*[@role="rowgroup"]//*[td="${companynamefull}"]//*[@class='delete-cell']//*[@class='badge badge-important']//*[@class='icon-remove icon-white']
+    Click Element                           xpath=//*[@id="tblCompanies"]//*[@class="k-grid-content"]//*[@role="grid"]//*[@role="rowgroup"]//*[td="${companynamefull}"]//*[@class='delete-cell']
 
 Entrar na company criada
-    Wait Until Element Is Visible           xpath=//*[@id="tblCompanies"]//*[@class="k-grid-content"]//*[@role="grid"]//*[@role="rowgroup"]//*[td="${TOKEN1}"]
-    Click Element                           xpath=//*[@id="tblCompanies"]//*[@class="k-grid-content"]//*[@role="grid"]//*[@role="rowgroup"]//*[td="${TOKEN1}"]
+    Wait Until Element Is Visible           xpath=//*[@id="tblCompanies"]//*[@class="k-grid-content"]//*[@role="grid"]//*[@role="rowgroup"]//*[td="${companynamefull}"]
+    Click Element                           xpath=//*[@id="tblCompanies"]//*[@class="k-grid-content"]//*[@role="grid"]//*[@role="rowgroup"]//*[td="${companynamefull}"]
     Wait Until Element Is Visible           xpath=//*[@id="content"]/app/main/view-rules/div[2]/div/div/div[3]/div/button
 
 Criar administration
-    Click Element                           xpath=xpath=//*[@id="content"]/app/main/view-rules/div[2]/div/div/div[3]/div/button
+    Click Element                           xpath=//*[@id="content"]/app/main/view-rules/div[2]/div/div/div[3]/div/button
+    Wait Until Element Is Visible           xpath=//*[@id="undefined-undefined-AdministrationType-45081"]
+    Click Element                           xpath=//*[@id="undefined-undefined-Country-43038"]/div[1]/div[2]
+    Click Element                           xpath=/html/body/div[7]/div/div/div/div[208]/span/div/div/div
+    Click Element                           xpath=/html/body/div[7]/div/div/div/div[2]/span/div/div/div
+    Input Text                              xpath=//*[@id="VATNumber"]          ${vatnumber}
+    Click Element                           xpath=//*[@id="undefined-undefined-VATNumberType-59514"]/div[1]/div[2]
+    Click Element                           xpath=/html/body/div[7]/div/div/div/div[2]/span/div/div/div
+    Input Text                              xpath=//*[@id="CompanyCode"]        ${companycode}
+    Input Text                              xpath=//*[@id="ApplicantFullName"]  ${companyfullname}
+    Input Text                              xpath=//*[@id="ApplicantEmail"]     
 
 Generate Company String
     ${token_locator1}=          Generate Random String  8  [NUMBERS]
     ${token_locator2}=          Generate Random String  3  [NUMBERS]
-    Set Global Variable         ${TOKEN1}          Company_${token_locator1}
-    Set Global Variable         ${TOKEN2}          Company_${token_locator2}
-    Log to Console              ${TOKEN1}
-    Log to Console              ${TOKEN2}
+    Set Global Variable         ${companynamefull}          Company_${token_locator1}
+    Set Global Variable         ${companynameabr}           Company_${token_locator2}
+    Log to Console              ${companynamefull}
+    Log to Console              ${companynameabr}
