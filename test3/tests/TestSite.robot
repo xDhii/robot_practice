@@ -4,18 +4,19 @@ Test Setup              Abrir navegador
 Test Teardown           Fechar navegador
 
 *** Test Case ***
-# Fazer login no sistema
-#         Fazer login com o email "${emailadmin}" e senha "${senhaadmin}!"no portal
+Fazer login no sistema e deslogar em seguida
+        Fazer login no portal
+        Deslogar do portal
 
-Criar uma nova company
-        # ${TOKEN} =  Generate Random String  8  [NUMBERS]
-        Fazer login com o email "${emailadmin}" e senha "${senhaadmin}!"no portal
+Criar uma nova company e deletar em seguida
+        Fazer login no portal
         Navegar até a tela de companies
         Uma vez na tela de companies, criar uma company
+        Encontrar e deletar a company criada
 
-# Criar uma administration
-#         Fazer login com o email "${emailadmin}" e senha "${senhaadmin}!"no portal
-#         Navegar até a tela de companies
-#         Encontrar a company criada
-# Editar a company criada
-#         Navegar até a tela de companies
+Criar uma administration
+        Fazer login no portal
+        Navegar até a tela de companies
+        Uma vez na tela de companies, criar uma company
+        Entrar na company criada
+        Criar administration

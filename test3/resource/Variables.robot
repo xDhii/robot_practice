@@ -10,11 +10,3 @@ ${hometitle}        Home
 ${logintitle}       Login
 ${emailadmin}       adriano@test
 ${senhaadmin}       Sovos123!
-# ${nomecompanyfull}  Company_${TOKEN}
-# ${nomecompanyabr}   CP_${TOKEN}
-
-
-Get Company Locator
-    [Arguments]    ${company}
-    ${company_loc}    Set Variable    xpath=//td[contains(text(),'${company}')]
-    [Return]    ${company_loc}
