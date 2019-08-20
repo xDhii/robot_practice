@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 3.1.1 (Python 3.7.4 on win32)" generated="20190819 17:01:23.717" rpa="false">
 <suite id="s1" name="TestSite" source="Z:\SPO\Users\Adriano Valumin\Cursos\Robot\test2\tests\TestSite.robot">
+=======
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20190819 20:39:25.933" rpa="false">
+<suite id="s1" name="TestSite" source="D:\dev\robot_practice\test2\tests\TestSite.robot">
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 <test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
 <kw name="Abrir navegador" library="Resource" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -9,6 +14,7 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20190819 17:01:24.002" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com'.</msg>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
@@ -22,10 +28,92 @@
 <status status="FAIL" starttime="20190819 17:01:24.002" endtime="20190819 17:07:26.267"></status>
 </kw>
 <status status="FAIL" starttime="20190819 17:01:24.001" endtime="20190819 17:07:26.267"></status>
+=======
+<msg timestamp="20190819 20:39:26.461" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com'.</msg>
+<status status="PASS" starttime="20190819 20:39:26.461" endtime="20190819 20:39:40.474"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:26.460" endtime="20190819 20:39:40.474"></status>
+</kw>
+<kw name="Acessar a página home do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20190819 20:39:40.490" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20190819 20:39:40.477" endtime="20190819 20:39:40.491"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:40.476" endtime="20190819 20:39:40.491"></status>
+</kw>
+<kw name="Digitar o nome do produto &quot;Blouse&quot; no campo de Pesquisar" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="search_query_top"]</arg>
+</arguments>
+<status status="PASS" starttime="20190819 20:39:40.493" endtime="20190819 20:39:40.560"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=search_query</arg>
+<arg>${PRODUTO}</arg>
+</arguments>
+<msg timestamp="20190819 20:39:40.561" level="INFO">Typing text 'Blouse' into text field 'name=search_query'.</msg>
+<status status="PASS" starttime="20190819 20:39:40.560" endtime="20190819 20:39:40.722"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:40.492" endtime="20190819 20:39:40.722"></status>
+</kw>
+<kw name="Clicar no botão Pesquisar" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>name=submit_search</arg>
+</arguments>
+<msg timestamp="20190819 20:39:40.724" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" starttime="20190819 20:39:40.724" endtime="20190819 20:39:42.253"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:40.723" endtime="20190819 20:39:42.253"></status>
+</kw>
+<kw name="Conferir se o produto &quot;Blouse&quot; foi listado no site" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=#center_column &gt; h1</arg>
+</arguments>
+<status status="PASS" starttime="20190819 20:39:42.256" endtime="20190819 20:39:42.396"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']</arg>
+</arguments>
+<msg timestamp="20190819 20:39:42.515" level="INFO">Current page contains image 'xpath=//*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']'.</msg>
+<status status="PASS" starttime="20190819 20:39:42.397" endtime="20190819 20:39:42.515"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="center_column"]//a[@class="product-name"][contains(text(),"${PRODUTO}")]</arg>
+</arguments>
+<msg timestamp="20190819 20:39:42.679" level="INFO">Current page contains link 'xpath=//*[@id="center_column"]//a[@class="product-name"][contains(text(),"Blouse")]'.</msg>
+<status status="PASS" starttime="20190819 20:39:42.516" endtime="20190819 20:39:42.679"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="columns"]//a[@class="home"]</arg>
+</arguments>
+<msg timestamp="20190819 20:39:42.711" level="INFO">Current page contains element 'xpath=//*[@id="columns"]//a[@class="home"]'.</msg>
+<status status="PASS" starttime="20190819 20:39:42.679" endtime="20190819 20:39:42.711"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:42.255" endtime="20190819 20:39:42.711"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </kw>
 <kw name="Fechar navegador" library="Resource" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
 <status status="PASS" starttime="20190819 17:07:26.268" endtime="20190819 17:07:28.321"></status>
 </kw>
 <status status="PASS" starttime="20190819 17:07:26.268" endtime="20190819 17:07:28.321"></status>
@@ -34,6 +122,13 @@
 TimeoutException: Message: timeout
   (Session info: chrome=75.0.3770.100)
 </status>
+=======
+<status status="PASS" starttime="20190819 20:39:42.713" endtime="20190819 20:39:44.932"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:42.712" endtime="20190819 20:39:44.932"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:26.459" endtime="20190819 20:39:44.933" critical="yes"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </test>
 <test id="s1-t2" name="Caso de Teste 02: Pesquisar produto não existente">
 <kw name="Abrir navegador" library="Resource" type="setup">
@@ -43,10 +138,17 @@ TimeoutException: Message: timeout
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20190819 17:07:28.374" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com'.</msg>
 <status status="PASS" starttime="20190819 17:07:28.374" endtime="20190819 17:12:05.882"></status>
 </kw>
 <status status="PASS" starttime="20190819 17:07:28.373" endtime="20190819 17:12:05.882"></status>
+=======
+<msg timestamp="20190819 20:39:44.943" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com'.</msg>
+<status status="PASS" starttime="20190819 20:39:44.942" endtime="20190819 20:39:57.559"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:44.940" endtime="20190819 20:39:57.559"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </kw>
 <kw name="Acessar a página home do site" library="Resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
@@ -54,10 +156,17 @@ TimeoutException: Message: timeout
 <arguments>
 <arg>My Store</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20190819 17:12:05.888" level="INFO">Page title is 'My Store'.</msg>
 <status status="PASS" starttime="20190819 17:12:05.883" endtime="20190819 17:12:05.888"></status>
 </kw>
 <status status="PASS" starttime="20190819 17:12:05.883" endtime="20190819 17:12:05.888"></status>
+=======
+<msg timestamp="20190819 20:39:57.569" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20190819 20:39:57.561" endtime="20190819 20:39:57.570"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:57.560" endtime="20190819 20:39:57.571"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </kw>
 <kw name="Digitar o nome do produto &quot;ItemNaoExistente&quot; no campo de Pesquisar" library="Resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -65,7 +174,11 @@ TimeoutException: Message: timeout
 <arguments>
 <arg>xpath=//*[@id="search_query_top"]</arg>
 </arguments>
+<<<<<<< HEAD
 <status status="PASS" starttime="20190819 17:12:05.889" endtime="20190819 17:12:06.347"></status>
+=======
+<status status="PASS" starttime="20190819 20:39:57.572" endtime="20190819 20:39:57.619"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -73,10 +186,17 @@ TimeoutException: Message: timeout
 <arg>name=search_query</arg>
 <arg>ItemNaoExistente</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20190819 17:12:06.347" level="INFO">Typing text 'ItemNaoExistente' into text field 'name=search_query'.</msg>
 <status status="PASS" starttime="20190819 17:12:06.347" endtime="20190819 17:12:06.459"></status>
 </kw>
 <status status="PASS" starttime="20190819 17:12:05.888" endtime="20190819 17:12:06.460"></status>
+=======
+<msg timestamp="20190819 20:39:57.620" level="INFO">Typing text 'ItemNaoExistente' into text field 'name=search_query'.</msg>
+<status status="PASS" starttime="20190819 20:39:57.620" endtime="20190819 20:39:57.848"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:57.572" endtime="20190819 20:39:57.848"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </kw>
 <kw name="Clicar no botão Pesquisar" library="Resource">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -84,10 +204,17 @@ TimeoutException: Message: timeout
 <arguments>
 <arg>name=submit_search</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20190819 17:12:06.461" level="INFO">Clicking button 'name=submit_search'.</msg>
 <status status="PASS" starttime="20190819 17:12:06.461" endtime="20190819 17:12:07.977"></status>
 </kw>
 <status status="PASS" starttime="20190819 17:12:06.460" endtime="20190819 17:12:07.978"></status>
+=======
+<msg timestamp="20190819 20:39:57.849" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" starttime="20190819 20:39:57.849" endtime="20190819 20:39:59.281"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:57.849" endtime="20190819 20:39:59.281"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </kw>
 <kw name="Conferir mensagem de erro &quot;No results were found for your search &quot;ItemNãoExistente&quot;&quot;" library="Resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -95,21 +222,33 @@ TimeoutException: Message: timeout
 <arguments>
 <arg>css=#center_column &gt; h1</arg>
 </arguments>
+<<<<<<< HEAD
 <status status="PASS" starttime="20190819 17:12:07.978" endtime="20190819 17:12:08.007"></status>
+=======
+<status status="PASS" starttime="20190819 20:39:59.283" endtime="20190819 20:39:59.335"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>xpath=//*[@id="center_column"]//*[@class="alert alert-warning"]</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20190819 17:12:08.019" level="INFO">Current page contains element 'xpath=//*[@id="center_column"]//*[@class="alert alert-warning"]'.</msg>
 <status status="PASS" starttime="20190819 17:12:08.007" endtime="20190819 17:12:08.019"></status>
 </kw>
 <status status="PASS" starttime="20190819 17:12:07.978" endtime="20190819 17:12:08.019"></status>
+=======
+<msg timestamp="20190819 20:39:59.360" level="INFO">Current page contains element 'xpath=//*[@id="center_column"]//*[@class="alert alert-warning"]'.</msg>
+<status status="PASS" starttime="20190819 20:39:59.335" endtime="20190819 20:39:59.360"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:59.282" endtime="20190819 20:39:59.360"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </kw>
 <kw name="Fechar navegador" library="Resource" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
 <status status="PASS" starttime="20190819 17:12:08.020" endtime="20190819 17:12:10.235"></status>
 </kw>
 <status status="PASS" starttime="20190819 17:12:08.020" endtime="20190819 17:12:10.235"></status>
@@ -117,6 +256,15 @@ TimeoutException: Message: timeout
 <status status="PASS" starttime="20190819 17:07:28.372" endtime="20190819 17:12:10.235" critical="yes"></status>
 </test>
 <status status="FAIL" starttime="20190819 17:01:23.725" endtime="20190819 17:12:10.238"></status>
+=======
+<status status="PASS" starttime="20190819 20:39:59.361" endtime="20190819 20:40:01.529"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:59.361" endtime="20190819 20:40:01.529"></status>
+</kw>
+<status status="PASS" starttime="20190819 20:39:44.938" endtime="20190819 20:40:01.531" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190819 20:39:25.936" endtime="20190819 20:40:01.538"></status>
+>>>>>>> 71e41aba6c910de41fd0a4d2fe67b321d078ac76
 </suite>
 <statistics>
 <total>
