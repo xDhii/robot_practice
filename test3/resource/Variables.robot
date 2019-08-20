@@ -5,7 +5,7 @@ Library             BuiltIn
 
 *** Variables ***
 ${URL}              http://qavat2.sovos.com/
-${BROWSER}          headlesschrome
+${BROWSER}          chrome
 ${hometitle}        Home
 ${logintitle}       Login
 ${emailadmin}       adriano@test
