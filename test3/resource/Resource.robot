@@ -65,7 +65,7 @@ Criar administration
     Click Element                           xpath=/html/body/div[7]/div/div/div/div[2]/span/div/div/div
     Input Text                              xpath=//*[@id="CompanyCode"]        ${companycode}
     Input Text                              xpath=//*[@id="ApplicantFullName"]  ${companyfullname}
-    Input Text                              xpath=//*[@id="ApplicantEmail"]     
+    Input Text                              xpath=//*[@id="ApplicantEmail"]     ${email}
 
 Generate Company String
     ${token_locator1}=          Generate Random String  8  [NUMBERS]
