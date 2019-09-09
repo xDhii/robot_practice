@@ -1,11 +1,25 @@
 *** Settings ***
-Library       SeleniumLibrary
+Library         SeleniumLibrary
+Library         DiffLibrary
+Library         OperatingSystem
 
 *** Variables ***
 ${URL}            http://automationpractice.com
 ${BROWSER}        chrome
 
 *** Keywords ***
+Comparar dois arquivos
+    Set Suite Variable      ${RESOURCEDIR}        ${CURDIR}
+    ${arquivo1}   Normalize Path         ${RESOURCEDIR}\\arquivo1.xlsx
+    ${arquivo2}   Normalize Path         ${RESOURCEDIR}\\arquivo2.xlsx
+    ${arquivo3}   Normalize Path         ${RESOURCEDIR}\\arquivo1.txt
+    ${arquivo4}   Normalize Path         ${RESOURCEDIR}\\arquivo2.txt
+    ${arquivo5}   Normalize Path         ${RESOURCEDIR}\\arquivo3.txt
+    ${arquivo6}   Normalize Path         ${RESOURCEDIR}\\arquivo4.txt
+    Diff Files  ${arquivo1}  ${arquivo2}  fail=True
+    Diff Files  ${arquivo3}  ${arquivo4}  fail=True
+    Diff Files  ${arquivo5}  ${arquivo6}  fail=True
+
 Abrir navegador
     Open Browser    ${URL}  ${BROWSER}
 
